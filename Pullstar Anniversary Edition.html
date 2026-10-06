@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pullstar Anniversary Edition</title>
+<meta name="description" content="Pullstar Anniversary Edition: five original creature cards in a pack with a tear tab that never touches the cards.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
+<style>:root{--navy:#14213D;--star:#FFC93C;--teal:#3EE6D0;--text:#EEF1F8;--soft:#B9C0D8;--bg:#1A1240;--panel:#221A52;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#F3F1FB;--text:#14213D;--soft:#4A5370;--panel:#E4E0F5}}
+:root[data-theme="dark"]{--bg:#1A1240;--text:#EEF1F8;--soft:#B9C0D8;--panel:#221A52}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-weight:600;font-size:16px}
+nav a{color:inherit;text-decoration:none} nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.hero{background:radial-gradient(ellipse at 70% 60%,#3A2A8A 0%,#1A1240 60%),#1A1240;color:#EEF1F8;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:24px;min-height:600px;padding-bottom:40px}
+h1{font-size:clamp(48px,7.4vw,96px);line-height:.92;letter-spacing:-.035em;font-weight:800;margin:0 0 24px}
+.lede{font-size:21px;max-width:30ch;color:#C9CEE6;margin:0 0 32px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 26px;border-radius:999px;font-weight:800;font-size:17px;text-decoration:none;border:2px solid var(--star)}
+.btn.primary{background:var(--star);color:var(--navy)}
+.btn.ghost{color:#EEF1F8}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.stage{position:relative;height:520px}
+.fan{position:absolute;left:50%;top:50%;width:250px;margin:-175px 0 0 -125px;transform-origin:50% 120%;filter:drop-shadow(0 18px 24px rgba(0,0,0,.45));animation:deal .9s cubic-bezier(.2,.8,.2,1) both}
+.f0{transform:rotate(-22deg) translateY(28px);animation-delay:0ms}.f1{transform:rotate(-11deg) translateY(14px);animation-delay:90ms}.f2{transform:rotate(0deg);animation-delay:180ms}.f3{transform:rotate(11deg) translateY(14px);animation-delay:270ms}.f4{transform:rotate(22deg) translateY(28px);animation-delay:360ms}
+@keyframes deal{from{transform:rotate(0deg) translateY(60px);opacity:0}}
+.cardsvg{display:block;width:100%;height:auto}
+section{padding:96px 0}
+h2{font-size:clamp(34px,4.6vw,56px);line-height:1;letter-spacing:-.025em;margin:0 0 16px;font-weight:800}
+.intro{color:var(--soft);max-width:56ch;margin:0 0 40px}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:36px 28px}
+.cardwrap{transition:transform .3s}
+.cell.have .cardwrap{transform:rotate(-2deg) translateY(-4px)}
+.meta h3{margin:16px 0 0;font-size:22px;letter-spacing:-.01em}
+.meta p{margin:2px 0 12px;color:var(--soft);font-size:16px}
+.got{font:600 15px 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;min-height:44px;padding:0 18px;border-radius:999px;border:2px solid var(--soft);background:transparent;color:var(--text);cursor:pointer}
+.got[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:var(--navy)}
+.count{font-weight:800;font-size:20px;margin:0 0 32px;min-height:1.5em}
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;counter-reset:s}
+.steps li{counter-increment:s;border-top:4px solid var(--star);padding-top:18px}
+.steps li::before{content:counter(s);display:block;font-size:56px;font-weight:800;line-height:1;margin-bottom:10px;color:var(--star)}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .steps li::before{color:#B07A00}}
+.steps h3{margin:0 0 6px;font-size:21px} .steps p{margin:0;color:var(--soft);font-size:16px}
+.price{background:var(--panel)}
+.price-grid{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
+.qr{background:#fff;padding:18px;border-radius:20px;width:220px}
+.qr svg{display:block;width:100%;height:auto}
+footer{padding:48px 0 64px}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;color:var(--soft);font-size:15px}
+.foot-logo{background:var(--navy);padding:10px 16px;border-radius:12px;display:inline-flex}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;min-height:0;padding-top:16px}.stage{height:420px}.fan{width:200px;margin:-140px 0 0 -100px}.steps{grid-template-columns:1fr 1fr}.price-grid{grid-template-columns:1fr}nav ul{display:none}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}.stage{height:350px}.fan{width:160px;margin:-112px 0 0 -80px}section{padding:72px 0}}
+@media (prefers-reduced-motion: reduce){.fan{animation:none}html{scroll-behavior:auto}.cardwrap{transition:none}}
+
+.mp{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin:0 0 14px;padding:8px 12px;border-radius:10px;background:var(--panel);font-size:15px;color:var(--soft)}
+.mp strong{color:var(--text);font-size:17px}
+
+.cell.holo .cardwrap{position:relative;overflow:hidden;border-radius:5%/3.6%}
+.cell.holo .cardwrap::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.28) 45%,rgba(255,236,160,.18) 50%,transparent 62%);background-size:250% 100%;mix-blend-mode:overlay;animation:sheen 3.2s ease-in-out infinite;pointer-events:none}
+@keyframes sheen{0%{background-position:120% 0}60%,100%{background-position:-30% 0}}
+@media (prefers-reduced-motion: reduce){.cell.holo .cardwrap::after{animation:none;background-position:40% 0}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="wrap"><nav aria-label="Main"><svg viewBox="0 0 260 64" width="170" height="42" role="img" aria-label="Pullstar"><polygon points="32.0,4.0 39.6,23.5 60.5,24.7 44.4,38.0 49.6,58.3 32.0,47.0 14.4,58.3 19.6,38.0 3.5,24.7 24.4,23.5" fill="#FFC93C" stroke="#14213D" stroke-width="3" stroke-linejoin="round"/><path d="M22 35 H40 M34 29 L40 35 L34 41" fill="none" stroke="#14213D" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><text x="70" y="46" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="36" letter-spacing="-0.5" textLength="184" lengthAdjust="spacingAndGlyphs" fill="#F4F1EA">PULL<tspan fill="#FFC93C">STAR</tspan></text></svg><ul><li><a href="#cards">The cards</a></li><li><a href="#open">How to open</a></li><li><a href="#price">Price check</a></li></ul></nav></div>
+<div class="wrap hero-grid">
+<div>
+<h1>Five cards. One clean pull.</h1>
+<p class="lede">The Pullstar Anniversary Edition pack has a tear tab that rips well above the cards, so every pull comes out flat.</p>
+<div class="btns"><a class="btn primary" href="https://claude.ai/artifact/JZgSTDtKh4VcDwWDWF8SFu">Open a pack in 3D</a><a class="btn ghost" href="#cards">Meet the five</a></div>
+</div>
+<div class="stage" role="img" aria-label="The five cards in the pack, fanned out"><div class="fan f0"><svg viewBox="0 0 315 440" class="cardsvg" aria-label="Sparklet card art">
+<defs><linearGradient id="h0f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE58A"></stop><stop offset="1" stop-color="#D99A12"></stop></linearGradient>
+<linearGradient id="h0b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3F8F"></stop><stop offset="1" stop-color="#5AA9FF"></stop></linearGradient>
+<linearGradient id="h0h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.3" stop-color="#FFD93D"></stop><stop offset="0.55" stop-color="#6BFF95"></stop><stop offset="0.8" stop-color="#4DD2FF"></stop><stop offset="1" stop-color="#A66BFF"></stop></linearGradient>
+<linearGradient id="h0r" x1="0" y1="0" x2="0.35" y2="0.35" spreadMethod="repeat"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.17" stop-color="#FFD93D"></stop><stop offset="0.34" stop-color="#6BFF95"></stop><stop offset="0.5" stop-color="#4DD2FF"></stop><stop offset="0.67" stop-color="#A66BFF"></stop><stop offset="0.84" stop-color="#FF8FB1"></stop><stop offset="1" stop-color="#FF4D6D"></stop></linearGradient>
+<clipPath id="h0c"><rect x="16" y="52" width="283" height="230" rx="10"></rect></clipPath></defs>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#h0f)"></rect>
+<rect x="6" y="6" width="303" height="428" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"></rect>
+
+<text x="22" y="38" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="24" fill="#14213D">Sparklet</text>
+<circle cx="284" cy="30" r="15" fill="#14213D"></circle><path transform="translate(284 30) scale(0.75)" d="M6 -14L-8 2L0 2L-4 14L8 -2L0 -2Z" fill="#FFE58A"></path>
+<g clip-path="url(#h0c)">
+<rect x="16" y="52" width="283" height="230" fill="url(#h0b)"></rect>
+<circle cx="157" cy="175" r="95" fill="#FFFFFF" opacity="0.10"></circle>
+<path d="M249 213 L251 218 L256 219 L251 220 L249 225 L247 220 L242 219 L247 218 Z" fill="#FFE58A" opacity="0.61"></path><path d="M93 161 L95 166 L100 167 L95 168 L93 173 L91 168 L86 167 L91 166 Z" fill="#FFE58A" opacity="0.60"></path><path d="M232 118 L234 123 L239 124 L234 125 L232 130 L230 125 L225 124 L230 123 Z" fill="#FFE58A" opacity="0.64"></path><path d="M179 245 L181 250 L186 251 L181 252 L179 257 L177 252 L172 251 L177 250 Z" fill="#FFE58A" opacity="0.65"></path><path d="M99 213 L101 218 L106 219 L101 220 L99 225 L97 220 L92 219 L97 218 Z" fill="#FFE58A" opacity="0.71"></path><path d="M91 245 L93 250 L98 251 L93 252 L91 257 L89 252 L84 251 L89 250 Z" fill="#FFE58A" opacity="0.89"></path><path d="M240 243 L242 248 L247 249 L242 250 L240 255 L238 250 L233 249 L238 248 Z" fill="#FFE58A" opacity="0.56"></path><path d="M218 243 L220 248 L225 249 L220 250 L218 255 L216 250 L211 249 L216 248 Z" fill="#FFE58A" opacity="0.74"></path><path d="M150 75 L152 80 L157 81 L152 82 L150 87 L148 82 L143 81 L148 80 Z" fill="#FFE58A" opacity="0.62"></path><path d="M186 246 L188 251 L193 252 L188 253 L186 258 L184 253 L179 252 L184 251 Z" fill="#FFE58A" opacity="0.88"></path><path d="M151 236 L153 241 L158 242 L153 243 L151 248 L149 243 L144 242 L149 241 Z" fill="#FFE58A" opacity="0.53"></path><path d="M238 169 L240 174 L245 175 L240 176 L238 181 L236 176 L231 175 L236 174 Z" fill="#FFE58A" opacity="0.41"></path><path d="M215 138 L217 143 L222 144 L217 145 L215 150 L213 145 L208 144 L213 143 Z" fill="#FFE58A" opacity="0.81"></path><path d="M202 54 L204 59 L209 60 L204 61 L202 66 L200 61 L195 60 L200 59 Z" fill="#FFE58A" opacity="0.65"></path><path d="M255 105 L257 110 L262 111 L257 112 L255 117 L253 112 L248 111 L253 110 Z" fill="#FFE58A" opacity="0.56"></path><path d="M256 94 L258 99 L263 100 L258 101 L256 106 L254 101 L249 100 L254 99 Z" fill="#FFE58A" opacity="0.68"></path><path d="M87 257 L89 262 L94 263 L89 264 L87 269 L85 264 L80 263 L85 262 Z" fill="#FFE58A" opacity="0.80"></path><path d="M143 71 L145 76 L150 77 L145 78 L143 83 L141 78 L136 77 L141 76 Z" fill="#FFE58A" opacity="0.56"></path>
+<ellipse cx="157" cy="268" rx="90" ry="10" fill="#000000" opacity="0.25"></ellipse>
+<g transform="translate(157 170) scale(1.45) translate(-200 -165)">
+<path d="M182 132 Q170 108 158 94" fill="none" stroke="#3EE6D0" stroke-width="5" stroke-linecap="round"></path><path d="M218 132 Q230 108 242 94" fill="none" stroke="#3EE6D0" stroke-width="5" stroke-linecap="round"></path>
+<path d="M158 82 L162 90 L171 92 L163 97 L165 106 L158 100 L150 105 L153 96 L146 91 L154 90 Z" fill="#FFC93C"></path><path d="M242 82 L246 90 L255 92 L247 97 L249 106 L242 100 L234 105 L237 96 L230 91 L238 90 Z" fill="#FFC93C"></path>
+<circle cx="200" cy="186" r="70" fill="#3EE6D0" opacity="0.18"></circle>
+<ellipse cx="146" cy="196" rx="9" ry="16" fill="#2CC7B3" transform="rotate(30 146 196)"></ellipse><ellipse cx="254" cy="196" rx="9" ry="16" fill="#2CC7B3" transform="rotate(-30 254 196)"></ellipse>
+<circle cx="200" cy="184" r="56" fill="#3EE6D0"></circle>
+<ellipse cx="200" cy="204" rx="34" ry="28" fill="#B8FFF4"></ellipse>
+<ellipse cx="182" cy="172" rx="8" ry="11" fill="#14213D"></ellipse><ellipse cx="218" cy="172" rx="8" ry="11" fill="#14213D"></ellipse><circle cx="185" cy="167" r="3" fill="#FFFFFF"></circle><circle cx="221" cy="167" r="3" fill="#FFFFFF"></circle>
+<path d="M189 192 Q200 202 211 192" fill="none" stroke="#14213D" stroke-width="3" stroke-linecap="round"></path>
+<path d="M200 146 L194 158 L201 158 L197 168 L207 154 L200 154 L204 146 Z" fill="#FFC93C"></path>
+</g>
+
+</g>
+<rect x="16" y="52" width="283" height="230" rx="10" fill="none" stroke="#14213D" stroke-width="3"></rect>
+<text x="22" y="304" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="10" letter-spacing="1" fill="#14213D">ELECTRIC · ANNIVERSARY EDITION</text>
+<rect x="16" y="316" width="283" height="78" rx="8" fill="#FFFFFF" fill-opacity="0.85"></rect>
+<text font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="13" fill="#14213D"><tspan x="28" y="340">Hums softly at night. Its</tspan><tspan x="28" y="359">antennae light up when a rare</tspan><tspan x="28" y="378">card is close by.</tspan></text>
+<text x="22" y="423" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="11" fill="#14213D">01/05</text>
+<text x="157" y="423" text-anchor="middle" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="#14213D">PULLSTAR</text>
+<path transform="translate(292 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path>
+</svg></div><div class="fan f1"><svg viewBox="0 0 315 440" class="cardsvg" aria-label="Frillo card art">
+<defs><linearGradient id="h1f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9FD3FF"></stop><stop offset="1" stop-color="#2F6FD6"></stop></linearGradient>
+<linearGradient id="h1b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F4C81"></stop><stop offset="1" stop-color="#4DB8FF"></stop></linearGradient>
+<linearGradient id="h1h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.3" stop-color="#FFD93D"></stop><stop offset="0.55" stop-color="#6BFF95"></stop><stop offset="0.8" stop-color="#4DD2FF"></stop><stop offset="1" stop-color="#A66BFF"></stop></linearGradient>
+<linearGradient id="h1r" x1="0" y1="0" x2="0.35" y2="0.35" spreadMethod="repeat"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.17" stop-color="#FFD93D"></stop><stop offset="0.34" stop-color="#6BFF95"></stop><stop offset="0.5" stop-color="#4DD2FF"></stop><stop offset="0.67" stop-color="#A66BFF"></stop><stop offset="0.84" stop-color="#FF8FB1"></stop><stop offset="1" stop-color="#FF4D6D"></stop></linearGradient>
+<clipPath id="h1c"><rect x="16" y="52" width="283" height="230" rx="10"></rect></clipPath></defs>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#h1f)"></rect>
+<rect x="6" y="6" width="303" height="428" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"></rect>
+
+<text x="22" y="38" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="24" fill="#14213D">Frillo</text>
+<circle cx="284" cy="30" r="15" fill="#14213D"></circle><path transform="translate(284 30) scale(0.75)" d="M0 -14C9 -2 12 4 9 9C5 15 -5 15 -9 9C-12 4 -9 -2 0 -14Z" fill="#9FD3FF"></path>
+<g clip-path="url(#h1c)">
+<rect x="16" y="52" width="283" height="230" fill="url(#h1b)"></rect>
+<circle cx="157" cy="175" r="95" fill="#FFFFFF" opacity="0.10"></circle>
+<circle cx="60" cy="238" r="8.3" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="92" cy="164" r="6.1" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="197" cy="226" r="3.7" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="32" cy="236" r="6.0" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="227" cy="60" r="6.1" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="216" cy="108" r="9.6" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="264" cy="66" r="3.2" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="168" cy="257" r="5.7" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="82" cy="149" r="3.2" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="83" cy="152" r="6.5" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="86" cy="108" r="4.5" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="146" cy="121" r="3.2" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="247" cy="177" r="7.5" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="73" cy="268" r="9.0" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="56" cy="130" r="8.1" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="213" cy="257" r="6.0" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="245" cy="201" r="5.1" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="180" cy="245" r="8.9" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle>
+<ellipse cx="157" cy="268" rx="90" ry="10" fill="#000000" opacity="0.25"></ellipse>
+<g transform="translate(157 170) scale(1.75) translate(-94 -236)">
+<path d="M130 250 Q160 262 150 236 Q146 254 128 244 Z" fill="#5AA9FF"></path>
+<ellipse cx="100" cy="250" rx="42" ry="24" fill="#5AA9FF"></ellipse>
+<ellipse cx="80" cy="270" rx="9" ry="6" fill="#4A8FE0"></ellipse><ellipse cx="114" cy="270" rx="9" ry="6" fill="#4A8FE0"></ellipse>
+<ellipse cx="44" cy="200" rx="12" ry="5" fill="#FF8FB1" transform="rotate(-25 44 200)"></ellipse><ellipse cx="40" cy="215" rx="12" ry="5" fill="#FF8FB1"></ellipse><ellipse cx="44" cy="230" rx="12" ry="5" fill="#FF8FB1" transform="rotate(25 44 230)"></ellipse>
+<ellipse cx="116" cy="200" rx="12" ry="5" fill="#FF8FB1" transform="rotate(25 116 200)"></ellipse><ellipse cx="120" cy="215" rx="12" ry="5" fill="#FF8FB1"></ellipse><ellipse cx="116" cy="230" rx="12" ry="5" fill="#FF8FB1" transform="rotate(-25 116 230)"></ellipse>
+<circle cx="80" cy="216" r="34" fill="#7DBEFF"></circle>
+<circle cx="68" cy="212" r="5" fill="#14213D"></circle><circle cx="92" cy="212" r="5" fill="#14213D"></circle><circle cx="70" cy="210" r="1.6" fill="#FFFFFF"></circle><circle cx="94" cy="210" r="1.6" fill="#FFFFFF"></circle>
+<circle cx="60" cy="224" r="4" fill="#FF8FB1" opacity="0.7"></circle><circle cx="100" cy="224" r="4" fill="#FF8FB1" opacity="0.7"></circle>
+<path d="M72 226 Q80 233 88 226" fill="none" stroke="#14213D" stroke-width="2.5" stroke-linecap="round"></path>
+</g>
+
+</g>
+<rect x="16" y="52" width="283" height="230" rx="10" fill="none" stroke="#14213D" stroke-width="3"></rect>
+<text x="22" y="304" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="10" letter-spacing="1" fill="#14213D">WATER · ANNIVERSARY EDITION</text>
+<rect x="16" y="316" width="283" height="78" rx="8" fill="#FFFFFF" fill-opacity="0.85"></rect>
+<text font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="13" fill="#14213D"><tspan x="28" y="340">Lives in shallow tide pools</tspan><tspan x="28" y="359">and waves its pink frills to</tspan><tspan x="28" y="378">say hello.</tspan></text>
+<text x="22" y="423" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="11" fill="#14213D">02/05</text>
+<text x="157" y="423" text-anchor="middle" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="#14213D">PULLSTAR</text>
+<path transform="translate(292 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path>
+</svg></div><div class="fan f2"><svg viewBox="0 0 315 440" class="cardsvg" aria-label="Embowl card art">
+<defs><linearGradient id="h2f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB199"></stop><stop offset="1" stop-color="#D9452F"></stop></linearGradient>
+<linearGradient id="h2b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A1E2E"></stop><stop offset="1" stop-color="#FF8C28"></stop></linearGradient>
+<linearGradient id="h2h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.3" stop-color="#FFD93D"></stop><stop offset="0.55" stop-color="#6BFF95"></stop><stop offset="0.8" stop-color="#4DD2FF"></stop><stop offset="1" stop-color="#A66BFF"></stop></linearGradient>
+<linearGradient id="h2r" x1="0" y1="0" x2="0.35" y2="0.35" spreadMethod="repeat"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.17" stop-color="#FFD93D"></stop><stop offset="0.34" stop-color="#6BFF95"></stop><stop offset="0.5" stop-color="#4DD2FF"></stop><stop offset="0.67" stop-color="#A66BFF"></stop><stop offset="0.84" stop-color="#FF8FB1"></stop><stop offset="1" stop-color="#FF4D6D"></stop></linearGradient>
+<clipPath id="h2c"><rect x="16" y="52" width="283" height="230" rx="10"></rect></clipPath></defs>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#h2f)"></rect>
+<rect x="6" y="6" width="303" height="428" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"></rect>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#h2r)" opacity="0.16"></rect><text x="300" y="304" text-anchor="end" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="11" fill="#14213D">HOLOFOIL</text>
+<text x="22" y="38" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="24" fill="#14213D">Embowl</text>
+<circle cx="284" cy="30" r="15" fill="#14213D"></circle><path transform="translate(284 30) scale(0.75)" d="M0 -13C11 -2 10 11 0 13C-10 11 -11 0 -3 -5C-2 0 1 0 0 -13Z" fill="#FFB199"></path>
+<g clip-path="url(#h2c)">
+<rect x="16" y="52" width="283" height="230" fill="url(#h2b)"></rect>
+<circle cx="157" cy="175" r="95" fill="#FFFFFF" opacity="0.10"></circle>
+<circle cx="278" cy="259" r="1.6" fill="#FFC93C" opacity="0.44"></circle><circle cx="246" cy="215" r="3.2" fill="#FFC93C" opacity="0.55"></circle><circle cx="185" cy="187" r="3.0" fill="#FFC93C" opacity="0.48"></circle><circle cx="139" cy="143" r="3.3" fill="#FFC93C" opacity="0.90"></circle><circle cx="277" cy="174" r="2.6" fill="#FFC93C" opacity="0.53"></circle><circle cx="34" cy="66" r="2.7" fill="#FFC93C" opacity="0.56"></circle><circle cx="125" cy="247" r="2.8" fill="#FFC93C" opacity="0.68"></circle><circle cx="87" cy="65" r="2.3" fill="#FFC93C" opacity="0.47"></circle><circle cx="160" cy="270" r="3.2" fill="#FFC93C" opacity="0.49"></circle><circle cx="262" cy="227" r="3.3" fill="#FFC93C" opacity="0.85"></circle><circle cx="227" cy="226" r="2.4" fill="#FFC93C" opacity="0.89"></circle><circle cx="280" cy="94" r="3.4" fill="#FFC93C" opacity="0.76"></circle><circle cx="147" cy="171" r="2.7" fill="#FFC93C" opacity="0.86"></circle><circle cx="157" cy="235" r="2.4" fill="#FFC93C" opacity="0.84"></circle><circle cx="263" cy="157" r="2.9" fill="#FFC93C" opacity="0.86"></circle><circle cx="217" cy="162" r="2.1" fill="#FFC93C" opacity="0.56"></circle><circle cx="210" cy="95" r="3.8" fill="#FFC93C" opacity="0.53"></circle><circle cx="266" cy="125" r="3.9" fill="#FFC93C" opacity="0.75"></circle>
+<ellipse cx="157" cy="268" rx="90" ry="10" fill="#000000" opacity="0.25"></ellipse>
+<g transform="translate(157 170) scale(1.6) translate(-312 -214)">
+<path d="M296 196 Q298 166 310 152 Q312 172 320 174 Q328 162 328 150 Q344 174 330 198 Z" fill="#FFC93C"></path><path d="M304 196 Q306 178 314 170 Q316 184 322 184 Q330 180 330 172 Q336 190 326 200 Z" fill="#FF8C28"></path>
+<ellipse cx="274" cy="240" rx="10" ry="20" fill="#E4513F" transform="rotate(-20 274 240)"></ellipse><ellipse cx="350" cy="240" rx="10" ry="20" fill="#E4513F" transform="rotate(20 350 240)"></ellipse>
+<ellipse cx="312" cy="234" rx="40" ry="42" fill="#FF6B5A"></ellipse>
+<ellipse cx="312" cy="248" rx="24" ry="24" fill="#FFD2B8"></ellipse>
+<circle cx="298" cy="222" r="12" fill="#FFFFFF"></circle><circle cx="326" cy="222" r="12" fill="#FFFFFF"></circle><circle cx="300" cy="223" r="6" fill="#14213D"></circle><circle cx="324" cy="223" r="6" fill="#14213D"></circle>
+<path d="M307 233 L317 233 L312 242 Z" fill="#FFC93C"></path>
+<ellipse cx="302" cy="275" rx="8" ry="4" fill="#FFC93C"></ellipse><ellipse cx="322" cy="275" rx="8" ry="4" fill="#FFC93C"></ellipse>
+</g>
+<rect x="16" y="52" width="283" height="230" fill="url(#h2r)" opacity="0.14"></rect><path transform="translate(181 92) scale(0.39)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.58"></path><path transform="translate(148 289) scale(0.24)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.41"></path><path transform="translate(95 301) scale(0.24)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.59"></path><path transform="translate(31 91) scale(0.22)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.54"></path><path transform="translate(118 208) scale(0.27)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.51"></path><path transform="translate(129 97) scale(0.29)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.43"></path><path transform="translate(43 356) scale(0.34)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.52"></path><path transform="translate(270 176) scale(0.28)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.46"></path><path transform="translate(129 291) scale(0.20)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.47"></path>
+</g>
+<rect x="16" y="52" width="283" height="230" rx="10" fill="none" stroke="#14213D" stroke-width="3"></rect>
+<text x="22" y="304" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="10" letter-spacing="1" fill="#14213D">FIRE · ANNIVERSARY EDITION</text>
+<rect x="16" y="316" width="283" height="78" rx="8" fill="#FFFFFF" fill-opacity="0.85"></rect>
+<text font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="13" fill="#14213D"><tspan x="28" y="340">Keeps its nest warm all</tspan><tspan x="28" y="359">winter. The flame on its head</tspan><tspan x="28" y="378">flickers when it's happy.</tspan></text>
+<text x="22" y="423" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="11" fill="#14213D">03/05</text>
+<text x="157" y="423" text-anchor="middle" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="#14213D">PULLSTAR</text>
+<path transform="translate(292 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path><path transform="translate(276 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path><path transform="translate(260 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path>
+</svg></div><div class="fan f3"><svg viewBox="0 0 315 440" class="cardsvg" aria-label="Mothleaf card art">
+<defs><linearGradient id="h3f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A8F0B8"></stop><stop offset="1" stop-color="#2E9E5B"></stop></linearGradient>
+<linearGradient id="h3b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#163F2A"></stop><stop offset="1" stop-color="#5CD67A"></stop></linearGradient>
+<linearGradient id="h3h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.3" stop-color="#FFD93D"></stop><stop offset="0.55" stop-color="#6BFF95"></stop><stop offset="0.8" stop-color="#4DD2FF"></stop><stop offset="1" stop-color="#A66BFF"></stop></linearGradient>
+<linearGradient id="h3r" x1="0" y1="0" x2="0.35" y2="0.35" spreadMethod="repeat"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.17" stop-color="#FFD93D"></stop><stop offset="0.34" stop-color="#6BFF95"></stop><stop offset="0.5" stop-color="#4DD2FF"></stop><stop offset="0.67" stop-color="#A66BFF"></stop><stop offset="0.84" stop-color="#FF8FB1"></stop><stop offset="1" stop-color="#FF4D6D"></stop></linearGradient>
+<clipPath id="h3c"><rect x="16" y="52" width="283" height="230" rx="10"></rect></clipPath></defs>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#h3f)"></rect>
+<rect x="6" y="6" width="303" height="428" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"></rect>
+
+<text x="22" y="38" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="24" fill="#14213D">Mothleaf</text>
+<circle cx="284" cy="30" r="15" fill="#14213D"></circle><path transform="translate(284 30) scale(0.75)" d="M-11 11C-13 -7 2 -14 13 -13C12 0 4 12 -11 11Z" fill="#A8F0B8"></path>
+<g clip-path="url(#h3c)">
+<rect x="16" y="52" width="283" height="230" fill="url(#h3b)"></rect>
+<circle cx="157" cy="175" r="95" fill="#FFFFFF" opacity="0.10"></circle>
+<ellipse cx="87" cy="174" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(94 87 174)"></ellipse><ellipse cx="268" cy="160" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(148 268 160)"></ellipse><ellipse cx="41" cy="63" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(120 41 63)"></ellipse><ellipse cx="93" cy="109" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(120 93 109)"></ellipse><ellipse cx="168" cy="175" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(101 168 175)"></ellipse><ellipse cx="194" cy="92" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(162 194 92)"></ellipse><ellipse cx="64" cy="254" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(99 64 254)"></ellipse><ellipse cx="221" cy="201" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(16 221 201)"></ellipse><ellipse cx="66" cy="261" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(10 66 261)"></ellipse><ellipse cx="104" cy="67" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(68 104 67)"></ellipse><ellipse cx="150" cy="211" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(99 150 211)"></ellipse><ellipse cx="214" cy="253" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(101 214 253)"></ellipse><ellipse cx="218" cy="181" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(34 218 181)"></ellipse><ellipse cx="258" cy="80" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(34 258 80)"></ellipse><ellipse cx="156" cy="114" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(172 156 114)"></ellipse><ellipse cx="140" cy="192" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(77 140 192)"></ellipse><ellipse cx="136" cy="235" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(146 136 235)"></ellipse><ellipse cx="117" cy="183" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(149 117 183)"></ellipse>
+<ellipse cx="157" cy="268" rx="90" ry="10" fill="#000000" opacity="0.25"></ellipse>
+<g transform="translate(157 170) scale(1.25) translate(0 0)">
+<path d="M-4 -30 Q-20 -60 -34 -56" fill="none" stroke="#1E6B3D" stroke-width="3" stroke-linecap="round"></path><path d="M4 -30 Q20 -60 34 -56" fill="none" stroke="#1E6B3D" stroke-width="3" stroke-linecap="round"></path>
+<path d="M-6 -10 Q-70 -70 -84 -10 Q-60 10 -6 4 Z" fill="#5CD67A"></path><path d="M6 -10 Q70 -70 84 -10 Q60 10 6 4 Z" fill="#5CD67A"></path>
+<path d="M-6 6 Q-60 20 -56 56 Q-24 52 -6 16 Z" fill="#3FB865"></path><path d="M6 6 Q60 20 56 56 Q24 52 6 16 Z" fill="#3FB865"></path>
+<path d="M-8 -6 L-66 -26 M-30 -14 L-44 -40 M-46 -20 L-64 -6" stroke="#2E9E5B" stroke-width="2" fill="none"></path><path d="M8 -6 L66 -26 M30 -14 L44 -40 M46 -20 L64 -6" stroke="#2E9E5B" stroke-width="2" fill="none"></path>
+<ellipse cx="0" cy="4" rx="13" ry="34" fill="#2E9E5B"></ellipse>
+<circle cx="0" cy="-26" r="15" fill="#3FB865"></circle>
+<circle cx="-6" cy="-28" r="4" fill="#14213D"></circle><circle cx="6" cy="-28" r="4" fill="#14213D"></circle><circle cx="-5" cy="-29.5" r="1.3" fill="#FFFFFF"></circle><circle cx="7" cy="-29.5" r="1.3" fill="#FFFFFF"></circle>
+<path d="M-4 -20 Q0 -17 4 -20" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"></path>
+</g>
+
+</g>
+<rect x="16" y="52" width="283" height="230" rx="10" fill="none" stroke="#14213D" stroke-width="3"></rect>
+<text x="22" y="304" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="10" letter-spacing="1" fill="#14213D">GRASS · ANNIVERSARY EDITION</text>
+<rect x="16" y="316" width="283" height="78" rx="8" fill="#FFFFFF" fill-opacity="0.85"></rect>
+<text font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="13" fill="#14213D"><tspan x="28" y="340">Rests on branches by day and</tspan><tspan x="28" y="359">is easy to mistake for a</tspan><tspan x="28" y="378">cluster of leaves.</tspan></text>
+<text x="22" y="423" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="11" fill="#14213D">04/05</text>
+<text x="157" y="423" text-anchor="middle" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="#14213D">PULLSTAR</text>
+<path transform="translate(292 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path><path transform="translate(276 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path>
+</svg></div><div class="fan f4"><svg viewBox="0 0 315 440" class="cardsvg" aria-label="Nebbly card art">
+<defs><linearGradient id="h4f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E5D4FF"></stop><stop offset="1" stop-color="#7A4BD6"></stop></linearGradient>
+<linearGradient id="h4b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#120B33"></stop><stop offset="1" stop-color="#4B2A99"></stop></linearGradient>
+<linearGradient id="h4h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.3" stop-color="#FFD93D"></stop><stop offset="0.55" stop-color="#6BFF95"></stop><stop offset="0.8" stop-color="#4DD2FF"></stop><stop offset="1" stop-color="#A66BFF"></stop></linearGradient>
+<linearGradient id="h4r" x1="0" y1="0" x2="0.35" y2="0.35" spreadMethod="repeat"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.17" stop-color="#FFD93D"></stop><stop offset="0.34" stop-color="#6BFF95"></stop><stop offset="0.5" stop-color="#4DD2FF"></stop><stop offset="0.67" stop-color="#A66BFF"></stop><stop offset="0.84" stop-color="#FF8FB1"></stop><stop offset="1" stop-color="#FF4D6D"></stop></linearGradient>
+<clipPath id="h4c"><rect x="16" y="52" width="283" height="230" rx="10"></rect></clipPath></defs>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#h4f)"></rect>
+<rect x="6" y="6" width="303" height="428" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"></rect>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#h4r)" opacity="0.16"></rect><text x="300" y="304" text-anchor="end" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="11" fill="#14213D">HOLOFOIL</text>
+<text x="22" y="38" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="24" fill="#14213D">Nebbly</text>
+<circle cx="284" cy="30" r="15" fill="#14213D"></circle><path transform="translate(284 30) scale(0.75)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#E5D4FF"></path>
+<g clip-path="url(#h4c)">
+<rect x="16" y="52" width="283" height="230" fill="url(#h4b)"></rect>
+<circle cx="157" cy="175" r="95" fill="#FFFFFF" opacity="0.10"></circle>
+<circle cx="87" cy="82" r="1.4" fill="#FFFFFF" opacity="0.58"></circle><circle cx="42" cy="144" r="2.3" fill="#FFFFFF" opacity="0.90"></circle><circle cx="228" cy="107" r="1.7" fill="#FFFFFF" opacity="0.64"></circle><circle cx="70" cy="82" r="1.1" fill="#FFFFFF" opacity="0.96"></circle><circle cx="244" cy="229" r="2.1" fill="#FFFFFF" opacity="0.60"></circle><circle cx="106" cy="192" r="2.0" fill="#FFFFFF" opacity="0.93"></circle><circle cx="258" cy="78" r="1.8" fill="#FFFFFF" opacity="0.84"></circle><circle cx="159" cy="97" r="1.6" fill="#FFFFFF" opacity="0.54"></circle><circle cx="273" cy="242" r="1.7" fill="#FFFFFF" opacity="0.65"></circle><circle cx="266" cy="180" r="2.2" fill="#FFFFFF" opacity="0.92"></circle><circle cx="159" cy="147" r="1.8" fill="#FFFFFF" opacity="0.72"></circle><circle cx="67" cy="124" r="2.1" fill="#FFFFFF" opacity="0.52"></circle><circle cx="36" cy="192" r="1.2" fill="#FFFFFF" opacity="0.77"></circle><circle cx="149" cy="132" r="2.4" fill="#FFFFFF" opacity="0.60"></circle><circle cx="134" cy="103" r="1.8" fill="#FFFFFF" opacity="0.64"></circle><circle cx="119" cy="217" r="1.3" fill="#FFFFFF" opacity="0.78"></circle><circle cx="265" cy="81" r="0.9" fill="#FFFFFF" opacity="0.61"></circle><circle cx="228" cy="189" r="1.2" fill="#FFFFFF" opacity="0.67"></circle>
+<ellipse cx="157" cy="268" rx="90" ry="10" fill="#000000" opacity="0.25"></ellipse>
+<g transform="translate(157 170) scale(1.35) translate(0 -8)">
+<path d="M-30 10 Q-36 40 -26 70" fill="none" stroke="#C59BFF" stroke-width="5" stroke-linecap="round"></path><path d="M-10 14 Q-2 44 -12 78" fill="none" stroke="#E5D4FF" stroke-width="5" stroke-linecap="round"></path><path d="M10 14 Q2 44 12 78" fill="none" stroke="#C59BFF" stroke-width="5" stroke-linecap="round"></path><path d="M30 10 Q36 40 26 70" fill="none" stroke="#E5D4FF" stroke-width="5" stroke-linecap="round"></path>
+<circle cx="0" cy="-10" r="62" fill="#A66BFF" opacity="0.25"></circle>
+<path d="M-50 12 Q-54 -54 0 -56 Q54 -54 50 12 Q36 20 25 12 Q12 22 0 12 Q-12 22 -25 12 Q-36 20 -50 12 Z" fill="#A66BFF"></path>
+<circle cx="-24" cy="-30" r="4" fill="#FFFFFF" opacity="0.8"></circle><circle cx="22" cy="-36" r="3" fill="#FFFFFF" opacity="0.7"></circle><circle cx="30" cy="-14" r="2.5" fill="#FFE58A"></circle><circle cx="-34" cy="-8" r="2.5" fill="#FFE58A"></circle>
+<ellipse cx="-14" cy="-14" rx="6" ry="8" fill="#14213D"></ellipse><ellipse cx="14" cy="-14" rx="6" ry="8" fill="#14213D"></ellipse><circle cx="-12" cy="-17" r="2" fill="#FFFFFF"></circle><circle cx="16" cy="-17" r="2" fill="#FFFFFF"></circle>
+<path d="M-7 0 Q0 7 7 0" fill="none" stroke="#14213D" stroke-width="2.5" stroke-linecap="round"></path>
+</g>
+<rect x="16" y="52" width="283" height="230" fill="url(#h4r)" opacity="0.14"></rect><path transform="translate(299 202) scale(0.34)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.53"></path><path transform="translate(73 43) scale(0.32)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.38"></path><path transform="translate(123 384) scale(0.37)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.38"></path><path transform="translate(34 103) scale(0.37)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.36"></path><path transform="translate(76 55) scale(0.23)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.48"></path><path transform="translate(64 182) scale(0.35)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.53"></path><path transform="translate(132 340) scale(0.31)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.56"></path><path transform="translate(83 165) scale(0.32)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.59"></path><path transform="translate(192 209) scale(0.25)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.42"></path>
+</g>
+<rect x="16" y="52" width="283" height="230" rx="10" fill="none" stroke="#14213D" stroke-width="3"></rect>
+<text x="22" y="304" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="10" letter-spacing="1" fill="#14213D">COSMIC · ANNIVERSARY EDITION</text>
+<rect x="16" y="316" width="283" height="78" rx="8" fill="#FFFFFF" fill-opacity="0.85"></rect>
+<text font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="13" fill="#14213D"><tspan x="28" y="340">Drifts between the stars.</tspan><tspan x="28" y="359">Spotting one is said to bring</tspan><tspan x="28" y="378">a lucky pull.</tspan></text>
+<text x="22" y="423" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="11" fill="#14213D">05/05</text>
+<text x="157" y="423" text-anchor="middle" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="#14213D">PULLSTAR</text>
+<path transform="translate(292 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path><path transform="translate(276 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path><path transform="translate(260 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path>
+</svg></div></div>
+</div>
+</header>
+<main>
+<section id="cards"><div class="wrap">
+<h2>Meet the five</h2>
+<p class="intro">Every pack holds all five creatures plus an ad card. Mark the ones you've pulled and this page keeps track on your device.</p>
+<p class="count" id="count" aria-live="polite"></p>
+<ul class="grid"><li class="cell">
+<div class="cardwrap"><svg viewBox="0 0 315 440" class="cardsvg" aria-label="Sparklet card art">
+<defs><linearGradient id="g0f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE58A"></stop><stop offset="1" stop-color="#D99A12"></stop></linearGradient>
+<linearGradient id="g0b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3F8F"></stop><stop offset="1" stop-color="#5AA9FF"></stop></linearGradient>
+<linearGradient id="g0h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.3" stop-color="#FFD93D"></stop><stop offset="0.55" stop-color="#6BFF95"></stop><stop offset="0.8" stop-color="#4DD2FF"></stop><stop offset="1" stop-color="#A66BFF"></stop></linearGradient>
+<linearGradient id="g0r" x1="0" y1="0" x2="0.35" y2="0.35" spreadMethod="repeat"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.17" stop-color="#FFD93D"></stop><stop offset="0.34" stop-color="#6BFF95"></stop><stop offset="0.5" stop-color="#4DD2FF"></stop><stop offset="0.67" stop-color="#A66BFF"></stop><stop offset="0.84" stop-color="#FF8FB1"></stop><stop offset="1" stop-color="#FF4D6D"></stop></linearGradient>
+<clipPath id="g0c"><rect x="16" y="52" width="283" height="230" rx="10"></rect></clipPath></defs>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#g0f)"></rect>
+<rect x="6" y="6" width="303" height="428" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"></rect>
+
+<text x="22" y="38" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="24" fill="#14213D">Sparklet</text>
+<circle cx="284" cy="30" r="15" fill="#14213D"></circle><path transform="translate(284 30) scale(0.75)" d="M6 -14L-8 2L0 2L-4 14L8 -2L0 -2Z" fill="#FFE58A"></path>
+<g clip-path="url(#g0c)">
+<rect x="16" y="52" width="283" height="230" fill="url(#g0b)"></rect>
+<circle cx="157" cy="175" r="95" fill="#FFFFFF" opacity="0.10"></circle>
+<path d="M249 213 L251 218 L256 219 L251 220 L249 225 L247 220 L242 219 L247 218 Z" fill="#FFE58A" opacity="0.61"></path><path d="M93 161 L95 166 L100 167 L95 168 L93 173 L91 168 L86 167 L91 166 Z" fill="#FFE58A" opacity="0.60"></path><path d="M232 118 L234 123 L239 124 L234 125 L232 130 L230 125 L225 124 L230 123 Z" fill="#FFE58A" opacity="0.64"></path><path d="M179 245 L181 250 L186 251 L181 252 L179 257 L177 252 L172 251 L177 250 Z" fill="#FFE58A" opacity="0.65"></path><path d="M99 213 L101 218 L106 219 L101 220 L99 225 L97 220 L92 219 L97 218 Z" fill="#FFE58A" opacity="0.71"></path><path d="M91 245 L93 250 L98 251 L93 252 L91 257 L89 252 L84 251 L89 250 Z" fill="#FFE58A" opacity="0.89"></path><path d="M240 243 L242 248 L247 249 L242 250 L240 255 L238 250 L233 249 L238 248 Z" fill="#FFE58A" opacity="0.56"></path><path d="M218 243 L220 248 L225 249 L220 250 L218 255 L216 250 L211 249 L216 248 Z" fill="#FFE58A" opacity="0.74"></path><path d="M150 75 L152 80 L157 81 L152 82 L150 87 L148 82 L143 81 L148 80 Z" fill="#FFE58A" opacity="0.62"></path><path d="M186 246 L188 251 L193 252 L188 253 L186 258 L184 253 L179 252 L184 251 Z" fill="#FFE58A" opacity="0.88"></path><path d="M151 236 L153 241 L158 242 L153 243 L151 248 L149 243 L144 242 L149 241 Z" fill="#FFE58A" opacity="0.53"></path><path d="M238 169 L240 174 L245 175 L240 176 L238 181 L236 176 L231 175 L236 174 Z" fill="#FFE58A" opacity="0.41"></path><path d="M215 138 L217 143 L222 144 L217 145 L215 150 L213 145 L208 144 L213 143 Z" fill="#FFE58A" opacity="0.81"></path><path d="M202 54 L204 59 L209 60 L204 61 L202 66 L200 61 L195 60 L200 59 Z" fill="#FFE58A" opacity="0.65"></path><path d="M255 105 L257 110 L262 111 L257 112 L255 117 L253 112 L248 111 L253 110 Z" fill="#FFE58A" opacity="0.56"></path><path d="M256 94 L258 99 L263 100 L258 101 L256 106 L254 101 L249 100 L254 99 Z" fill="#FFE58A" opacity="0.68"></path><path d="M87 257 L89 262 L94 263 L89 264 L87 269 L85 264 L80 263 L85 262 Z" fill="#FFE58A" opacity="0.80"></path><path d="M143 71 L145 76 L150 77 L145 78 L143 83 L141 78 L136 77 L141 76 Z" fill="#FFE58A" opacity="0.56"></path>
+<ellipse cx="157" cy="268" rx="90" ry="10" fill="#000000" opacity="0.25"></ellipse>
+<g transform="translate(157 170) scale(1.45) translate(-200 -165)">
+<path d="M182 132 Q170 108 158 94" fill="none" stroke="#3EE6D0" stroke-width="5" stroke-linecap="round"></path><path d="M218 132 Q230 108 242 94" fill="none" stroke="#3EE6D0" stroke-width="5" stroke-linecap="round"></path>
+<path d="M158 82 L162 90 L171 92 L163 97 L165 106 L158 100 L150 105 L153 96 L146 91 L154 90 Z" fill="#FFC93C"></path><path d="M242 82 L246 90 L255 92 L247 97 L249 106 L242 100 L234 105 L237 96 L230 91 L238 90 Z" fill="#FFC93C"></path>
+<circle cx="200" cy="186" r="70" fill="#3EE6D0" opacity="0.18"></circle>
+<ellipse cx="146" cy="196" rx="9" ry="16" fill="#2CC7B3" transform="rotate(30 146 196)"></ellipse><ellipse cx="254" cy="196" rx="9" ry="16" fill="#2CC7B3" transform="rotate(-30 254 196)"></ellipse>
+<circle cx="200" cy="184" r="56" fill="#3EE6D0"></circle>
+<ellipse cx="200" cy="204" rx="34" ry="28" fill="#B8FFF4"></ellipse>
+<ellipse cx="182" cy="172" rx="8" ry="11" fill="#14213D"></ellipse><ellipse cx="218" cy="172" rx="8" ry="11" fill="#14213D"></ellipse><circle cx="185" cy="167" r="3" fill="#FFFFFF"></circle><circle cx="221" cy="167" r="3" fill="#FFFFFF"></circle>
+<path d="M189 192 Q200 202 211 192" fill="none" stroke="#14213D" stroke-width="3" stroke-linecap="round"></path>
+<path d="M200 146 L194 158 L201 158 L197 168 L207 154 L200 154 L204 146 Z" fill="#FFC93C"></path>
+</g>
+
+</g>
+<rect x="16" y="52" width="283" height="230" rx="10" fill="none" stroke="#14213D" stroke-width="3"></rect>
+<text x="22" y="304" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="10" letter-spacing="1" fill="#14213D">ELECTRIC · ANNIVERSARY EDITION</text>
+<rect x="16" y="316" width="283" height="78" rx="8" fill="#FFFFFF" fill-opacity="0.85"></rect>
+<text font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="13" fill="#14213D"><tspan x="28" y="340">Hums softly at night. Its</tspan><tspan x="28" y="359">antennae light up when a rare</tspan><tspan x="28" y="378">card is close by.</tspan></text>
+<text x="22" y="423" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="11" fill="#14213D">01/05</text>
+<text x="157" y="423" text-anchor="middle" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="#14213D">PULLSTAR</text>
+<path transform="translate(292 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path>
+</svg></div>
+<div class="meta"><h3>Sparklet</h3><p>Electric type</p>
+<p class="mp">Market price <strong data-mp="0">Not listed yet</strong></p>
+<button class="got" data-id="0" aria-pressed="false">I've got it</button></div></li><li class="cell">
+<div class="cardwrap"><svg viewBox="0 0 315 440" class="cardsvg" aria-label="Frillo card art">
+<defs><linearGradient id="g1f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9FD3FF"></stop><stop offset="1" stop-color="#2F6FD6"></stop></linearGradient>
+<linearGradient id="g1b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F4C81"></stop><stop offset="1" stop-color="#4DB8FF"></stop></linearGradient>
+<linearGradient id="g1h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.3" stop-color="#FFD93D"></stop><stop offset="0.55" stop-color="#6BFF95"></stop><stop offset="0.8" stop-color="#4DD2FF"></stop><stop offset="1" stop-color="#A66BFF"></stop></linearGradient>
+<linearGradient id="g1r" x1="0" y1="0" x2="0.35" y2="0.35" spreadMethod="repeat"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.17" stop-color="#FFD93D"></stop><stop offset="0.34" stop-color="#6BFF95"></stop><stop offset="0.5" stop-color="#4DD2FF"></stop><stop offset="0.67" stop-color="#A66BFF"></stop><stop offset="0.84" stop-color="#FF8FB1"></stop><stop offset="1" stop-color="#FF4D6D"></stop></linearGradient>
+<clipPath id="g1c"><rect x="16" y="52" width="283" height="230" rx="10"></rect></clipPath></defs>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#g1f)"></rect>
+<rect x="6" y="6" width="303" height="428" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"></rect>
+
+<text x="22" y="38" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="24" fill="#14213D">Frillo</text>
+<circle cx="284" cy="30" r="15" fill="#14213D"></circle><path transform="translate(284 30) scale(0.75)" d="M0 -14C9 -2 12 4 9 9C5 15 -5 15 -9 9C-12 4 -9 -2 0 -14Z" fill="#9FD3FF"></path>
+<g clip-path="url(#g1c)">
+<rect x="16" y="52" width="283" height="230" fill="url(#g1b)"></rect>
+<circle cx="157" cy="175" r="95" fill="#FFFFFF" opacity="0.10"></circle>
+<circle cx="60" cy="238" r="8.3" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="92" cy="164" r="6.1" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="197" cy="226" r="3.7" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="32" cy="236" r="6.0" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="227" cy="60" r="6.1" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="216" cy="108" r="9.6" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="264" cy="66" r="3.2" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="168" cy="257" r="5.7" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="82" cy="149" r="3.2" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="83" cy="152" r="6.5" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="86" cy="108" r="4.5" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="146" cy="121" r="3.2" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="247" cy="177" r="7.5" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="73" cy="268" r="9.0" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="56" cy="130" r="8.1" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="213" cy="257" r="6.0" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="245" cy="201" r="5.1" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle><circle cx="180" cy="245" r="8.9" fill="none" stroke="#DFF3FF" stroke-width="1.5" opacity="0.7"></circle>
+<ellipse cx="157" cy="268" rx="90" ry="10" fill="#000000" opacity="0.25"></ellipse>
+<g transform="translate(157 170) scale(1.75) translate(-94 -236)">
+<path d="M130 250 Q160 262 150 236 Q146 254 128 244 Z" fill="#5AA9FF"></path>
+<ellipse cx="100" cy="250" rx="42" ry="24" fill="#5AA9FF"></ellipse>
+<ellipse cx="80" cy="270" rx="9" ry="6" fill="#4A8FE0"></ellipse><ellipse cx="114" cy="270" rx="9" ry="6" fill="#4A8FE0"></ellipse>
+<ellipse cx="44" cy="200" rx="12" ry="5" fill="#FF8FB1" transform="rotate(-25 44 200)"></ellipse><ellipse cx="40" cy="215" rx="12" ry="5" fill="#FF8FB1"></ellipse><ellipse cx="44" cy="230" rx="12" ry="5" fill="#FF8FB1" transform="rotate(25 44 230)"></ellipse>
+<ellipse cx="116" cy="200" rx="12" ry="5" fill="#FF8FB1" transform="rotate(25 116 200)"></ellipse><ellipse cx="120" cy="215" rx="12" ry="5" fill="#FF8FB1"></ellipse><ellipse cx="116" cy="230" rx="12" ry="5" fill="#FF8FB1" transform="rotate(-25 116 230)"></ellipse>
+<circle cx="80" cy="216" r="34" fill="#7DBEFF"></circle>
+<circle cx="68" cy="212" r="5" fill="#14213D"></circle><circle cx="92" cy="212" r="5" fill="#14213D"></circle><circle cx="70" cy="210" r="1.6" fill="#FFFFFF"></circle><circle cx="94" cy="210" r="1.6" fill="#FFFFFF"></circle>
+<circle cx="60" cy="224" r="4" fill="#FF8FB1" opacity="0.7"></circle><circle cx="100" cy="224" r="4" fill="#FF8FB1" opacity="0.7"></circle>
+<path d="M72 226 Q80 233 88 226" fill="none" stroke="#14213D" stroke-width="2.5" stroke-linecap="round"></path>
+</g>
+
+</g>
+<rect x="16" y="52" width="283" height="230" rx="10" fill="none" stroke="#14213D" stroke-width="3"></rect>
+<text x="22" y="304" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="10" letter-spacing="1" fill="#14213D">WATER · ANNIVERSARY EDITION</text>
+<rect x="16" y="316" width="283" height="78" rx="8" fill="#FFFFFF" fill-opacity="0.85"></rect>
+<text font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="13" fill="#14213D"><tspan x="28" y="340">Lives in shallow tide pools</tspan><tspan x="28" y="359">and waves its pink frills to</tspan><tspan x="28" y="378">say hello.</tspan></text>
+<text x="22" y="423" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="11" fill="#14213D">02/05</text>
+<text x="157" y="423" text-anchor="middle" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="#14213D">PULLSTAR</text>
+<path transform="translate(292 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path>
+</svg></div>
+<div class="meta"><h3>Frillo</h3><p>Water type</p>
+<p class="mp">Market price <strong data-mp="1">Not listed yet</strong></p>
+<button class="got" data-id="1" aria-pressed="false">I've got it</button></div></li><li class="cell holo">
+<div class="cardwrap"><svg viewBox="0 0 315 440" class="cardsvg" aria-label="Embowl card art">
+<defs><linearGradient id="g2f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB199"></stop><stop offset="1" stop-color="#D9452F"></stop></linearGradient>
+<linearGradient id="g2b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A1E2E"></stop><stop offset="1" stop-color="#FF8C28"></stop></linearGradient>
+<linearGradient id="g2h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.3" stop-color="#FFD93D"></stop><stop offset="0.55" stop-color="#6BFF95"></stop><stop offset="0.8" stop-color="#4DD2FF"></stop><stop offset="1" stop-color="#A66BFF"></stop></linearGradient>
+<linearGradient id="g2r" x1="0" y1="0" x2="0.35" y2="0.35" spreadMethod="repeat"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.17" stop-color="#FFD93D"></stop><stop offset="0.34" stop-color="#6BFF95"></stop><stop offset="0.5" stop-color="#4DD2FF"></stop><stop offset="0.67" stop-color="#A66BFF"></stop><stop offset="0.84" stop-color="#FF8FB1"></stop><stop offset="1" stop-color="#FF4D6D"></stop></linearGradient>
+<clipPath id="g2c"><rect x="16" y="52" width="283" height="230" rx="10"></rect></clipPath></defs>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#g2f)"></rect>
+<rect x="6" y="6" width="303" height="428" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"></rect>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#g2r)" opacity="0.16"></rect><text x="300" y="304" text-anchor="end" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="11" fill="#14213D">HOLOFOIL</text>
+<text x="22" y="38" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="24" fill="#14213D">Embowl</text>
+<circle cx="284" cy="30" r="15" fill="#14213D"></circle><path transform="translate(284 30) scale(0.75)" d="M0 -13C11 -2 10 11 0 13C-10 11 -11 0 -3 -5C-2 0 1 0 0 -13Z" fill="#FFB199"></path>
+<g clip-path="url(#g2c)">
+<rect x="16" y="52" width="283" height="230" fill="url(#g2b)"></rect>
+<circle cx="157" cy="175" r="95" fill="#FFFFFF" opacity="0.10"></circle>
+<circle cx="278" cy="259" r="1.6" fill="#FFC93C" opacity="0.44"></circle><circle cx="246" cy="215" r="3.2" fill="#FFC93C" opacity="0.55"></circle><circle cx="185" cy="187" r="3.0" fill="#FFC93C" opacity="0.48"></circle><circle cx="139" cy="143" r="3.3" fill="#FFC93C" opacity="0.90"></circle><circle cx="277" cy="174" r="2.6" fill="#FFC93C" opacity="0.53"></circle><circle cx="34" cy="66" r="2.7" fill="#FFC93C" opacity="0.56"></circle><circle cx="125" cy="247" r="2.8" fill="#FFC93C" opacity="0.68"></circle><circle cx="87" cy="65" r="2.3" fill="#FFC93C" opacity="0.47"></circle><circle cx="160" cy="270" r="3.2" fill="#FFC93C" opacity="0.49"></circle><circle cx="262" cy="227" r="3.3" fill="#FFC93C" opacity="0.85"></circle><circle cx="227" cy="226" r="2.4" fill="#FFC93C" opacity="0.89"></circle><circle cx="280" cy="94" r="3.4" fill="#FFC93C" opacity="0.76"></circle><circle cx="147" cy="171" r="2.7" fill="#FFC93C" opacity="0.86"></circle><circle cx="157" cy="235" r="2.4" fill="#FFC93C" opacity="0.84"></circle><circle cx="263" cy="157" r="2.9" fill="#FFC93C" opacity="0.86"></circle><circle cx="217" cy="162" r="2.1" fill="#FFC93C" opacity="0.56"></circle><circle cx="210" cy="95" r="3.8" fill="#FFC93C" opacity="0.53"></circle><circle cx="266" cy="125" r="3.9" fill="#FFC93C" opacity="0.75"></circle>
+<ellipse cx="157" cy="268" rx="90" ry="10" fill="#000000" opacity="0.25"></ellipse>
+<g transform="translate(157 170) scale(1.6) translate(-312 -214)">
+<path d="M296 196 Q298 166 310 152 Q312 172 320 174 Q328 162 328 150 Q344 174 330 198 Z" fill="#FFC93C"></path><path d="M304 196 Q306 178 314 170 Q316 184 322 184 Q330 180 330 172 Q336 190 326 200 Z" fill="#FF8C28"></path>
+<ellipse cx="274" cy="240" rx="10" ry="20" fill="#E4513F" transform="rotate(-20 274 240)"></ellipse><ellipse cx="350" cy="240" rx="10" ry="20" fill="#E4513F" transform="rotate(20 350 240)"></ellipse>
+<ellipse cx="312" cy="234" rx="40" ry="42" fill="#FF6B5A"></ellipse>
+<ellipse cx="312" cy="248" rx="24" ry="24" fill="#FFD2B8"></ellipse>
+<circle cx="298" cy="222" r="12" fill="#FFFFFF"></circle><circle cx="326" cy="222" r="12" fill="#FFFFFF"></circle><circle cx="300" cy="223" r="6" fill="#14213D"></circle><circle cx="324" cy="223" r="6" fill="#14213D"></circle>
+<path d="M307 233 L317 233 L312 242 Z" fill="#FFC93C"></path>
+<ellipse cx="302" cy="275" rx="8" ry="4" fill="#FFC93C"></ellipse><ellipse cx="322" cy="275" rx="8" ry="4" fill="#FFC93C"></ellipse>
+</g>
+<rect x="16" y="52" width="283" height="230" fill="url(#g2r)" opacity="0.14"></rect><path transform="translate(181 92) scale(0.39)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.58"></path><path transform="translate(148 289) scale(0.24)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.41"></path><path transform="translate(95 301) scale(0.24)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.59"></path><path transform="translate(31 91) scale(0.22)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.54"></path><path transform="translate(118 208) scale(0.27)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.51"></path><path transform="translate(129 97) scale(0.29)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.43"></path><path transform="translate(43 356) scale(0.34)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.52"></path><path transform="translate(270 176) scale(0.28)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.46"></path><path transform="translate(129 291) scale(0.20)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.47"></path>
+</g>
+<rect x="16" y="52" width="283" height="230" rx="10" fill="none" stroke="#14213D" stroke-width="3"></rect>
+<text x="22" y="304" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="10" letter-spacing="1" fill="#14213D">FIRE · ANNIVERSARY EDITION</text>
+<rect x="16" y="316" width="283" height="78" rx="8" fill="#FFFFFF" fill-opacity="0.85"></rect>
+<text font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="13" fill="#14213D"><tspan x="28" y="340">Keeps its nest warm all</tspan><tspan x="28" y="359">winter. The flame on its head</tspan><tspan x="28" y="378">flickers when it's happy.</tspan></text>
+<text x="22" y="423" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="11" fill="#14213D">03/05</text>
+<text x="157" y="423" text-anchor="middle" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="#14213D">PULLSTAR</text>
+<path transform="translate(292 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path><path transform="translate(276 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path><path transform="translate(260 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path>
+</svg></div>
+<div class="meta"><h3>Embowl</h3><p>Fire type, rare holofoil</p>
+<p class="mp">Market price <strong data-mp="2">Not listed yet</strong></p>
+<button class="got" data-id="2" aria-pressed="false">I've got it</button></div></li><li class="cell">
+<div class="cardwrap"><svg viewBox="0 0 315 440" class="cardsvg" aria-label="Mothleaf card art">
+<defs><linearGradient id="g3f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A8F0B8"></stop><stop offset="1" stop-color="#2E9E5B"></stop></linearGradient>
+<linearGradient id="g3b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#163F2A"></stop><stop offset="1" stop-color="#5CD67A"></stop></linearGradient>
+<linearGradient id="g3h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.3" stop-color="#FFD93D"></stop><stop offset="0.55" stop-color="#6BFF95"></stop><stop offset="0.8" stop-color="#4DD2FF"></stop><stop offset="1" stop-color="#A66BFF"></stop></linearGradient>
+<linearGradient id="g3r" x1="0" y1="0" x2="0.35" y2="0.35" spreadMethod="repeat"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.17" stop-color="#FFD93D"></stop><stop offset="0.34" stop-color="#6BFF95"></stop><stop offset="0.5" stop-color="#4DD2FF"></stop><stop offset="0.67" stop-color="#A66BFF"></stop><stop offset="0.84" stop-color="#FF8FB1"></stop><stop offset="1" stop-color="#FF4D6D"></stop></linearGradient>
+<clipPath id="g3c"><rect x="16" y="52" width="283" height="230" rx="10"></rect></clipPath></defs>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#g3f)"></rect>
+<rect x="6" y="6" width="303" height="428" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"></rect>
+
+<text x="22" y="38" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="24" fill="#14213D">Mothleaf</text>
+<circle cx="284" cy="30" r="15" fill="#14213D"></circle><path transform="translate(284 30) scale(0.75)" d="M-11 11C-13 -7 2 -14 13 -13C12 0 4 12 -11 11Z" fill="#A8F0B8"></path>
+<g clip-path="url(#g3c)">
+<rect x="16" y="52" width="283" height="230" fill="url(#g3b)"></rect>
+<circle cx="157" cy="175" r="95" fill="#FFFFFF" opacity="0.10"></circle>
+<ellipse cx="87" cy="174" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(94 87 174)"></ellipse><ellipse cx="268" cy="160" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(148 268 160)"></ellipse><ellipse cx="41" cy="63" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(120 41 63)"></ellipse><ellipse cx="93" cy="109" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(120 93 109)"></ellipse><ellipse cx="168" cy="175" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(101 168 175)"></ellipse><ellipse cx="194" cy="92" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(162 194 92)"></ellipse><ellipse cx="64" cy="254" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(99 64 254)"></ellipse><ellipse cx="221" cy="201" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(16 221 201)"></ellipse><ellipse cx="66" cy="261" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(10 66 261)"></ellipse><ellipse cx="104" cy="67" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(68 104 67)"></ellipse><ellipse cx="150" cy="211" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(99 150 211)"></ellipse><ellipse cx="214" cy="253" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(101 214 253)"></ellipse><ellipse cx="218" cy="181" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(34 218 181)"></ellipse><ellipse cx="258" cy="80" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(34 258 80)"></ellipse><ellipse cx="156" cy="114" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(172 156 114)"></ellipse><ellipse cx="140" cy="192" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(77 140 192)"></ellipse><ellipse cx="136" cy="235" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(146 136 235)"></ellipse><ellipse cx="117" cy="183" rx="7" ry="3" fill="#8FE6A6" opacity="0.6" transform="rotate(149 117 183)"></ellipse>
+<ellipse cx="157" cy="268" rx="90" ry="10" fill="#000000" opacity="0.25"></ellipse>
+<g transform="translate(157 170) scale(1.25) translate(0 0)">
+<path d="M-4 -30 Q-20 -60 -34 -56" fill="none" stroke="#1E6B3D" stroke-width="3" stroke-linecap="round"></path><path d="M4 -30 Q20 -60 34 -56" fill="none" stroke="#1E6B3D" stroke-width="3" stroke-linecap="round"></path>
+<path d="M-6 -10 Q-70 -70 -84 -10 Q-60 10 -6 4 Z" fill="#5CD67A"></path><path d="M6 -10 Q70 -70 84 -10 Q60 10 6 4 Z" fill="#5CD67A"></path>
+<path d="M-6 6 Q-60 20 -56 56 Q-24 52 -6 16 Z" fill="#3FB865"></path><path d="M6 6 Q60 20 56 56 Q24 52 6 16 Z" fill="#3FB865"></path>
+<path d="M-8 -6 L-66 -26 M-30 -14 L-44 -40 M-46 -20 L-64 -6" stroke="#2E9E5B" stroke-width="2" fill="none"></path><path d="M8 -6 L66 -26 M30 -14 L44 -40 M46 -20 L64 -6" stroke="#2E9E5B" stroke-width="2" fill="none"></path>
+<ellipse cx="0" cy="4" rx="13" ry="34" fill="#2E9E5B"></ellipse>
+<circle cx="0" cy="-26" r="15" fill="#3FB865"></circle>
+<circle cx="-6" cy="-28" r="4" fill="#14213D"></circle><circle cx="6" cy="-28" r="4" fill="#14213D"></circle><circle cx="-5" cy="-29.5" r="1.3" fill="#FFFFFF"></circle><circle cx="7" cy="-29.5" r="1.3" fill="#FFFFFF"></circle>
+<path d="M-4 -20 Q0 -17 4 -20" fill="none" stroke="#14213D" stroke-width="2" stroke-linecap="round"></path>
+</g>
+
+</g>
+<rect x="16" y="52" width="283" height="230" rx="10" fill="none" stroke="#14213D" stroke-width="3"></rect>
+<text x="22" y="304" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="10" letter-spacing="1" fill="#14213D">GRASS · ANNIVERSARY EDITION</text>
+<rect x="16" y="316" width="283" height="78" rx="8" fill="#FFFFFF" fill-opacity="0.85"></rect>
+<text font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="13" fill="#14213D"><tspan x="28" y="340">Rests on branches by day and</tspan><tspan x="28" y="359">is easy to mistake for a</tspan><tspan x="28" y="378">cluster of leaves.</tspan></text>
+<text x="22" y="423" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="11" fill="#14213D">04/05</text>
+<text x="157" y="423" text-anchor="middle" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="#14213D">PULLSTAR</text>
+<path transform="translate(292 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path><path transform="translate(276 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path>
+</svg></div>
+<div class="meta"><h3>Mothleaf</h3><p>Grass type</p>
+<p class="mp">Market price <strong data-mp="3">Not listed yet</strong></p>
+<button class="got" data-id="3" aria-pressed="false">I've got it</button></div></li><li class="cell holo">
+<div class="cardwrap"><svg viewBox="0 0 315 440" class="cardsvg" aria-label="Nebbly card art">
+<defs><linearGradient id="g4f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E5D4FF"></stop><stop offset="1" stop-color="#7A4BD6"></stop></linearGradient>
+<linearGradient id="g4b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#120B33"></stop><stop offset="1" stop-color="#4B2A99"></stop></linearGradient>
+<linearGradient id="g4h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.3" stop-color="#FFD93D"></stop><stop offset="0.55" stop-color="#6BFF95"></stop><stop offset="0.8" stop-color="#4DD2FF"></stop><stop offset="1" stop-color="#A66BFF"></stop></linearGradient>
+<linearGradient id="g4r" x1="0" y1="0" x2="0.35" y2="0.35" spreadMethod="repeat"><stop offset="0" stop-color="#FF4D6D"></stop><stop offset="0.17" stop-color="#FFD93D"></stop><stop offset="0.34" stop-color="#6BFF95"></stop><stop offset="0.5" stop-color="#4DD2FF"></stop><stop offset="0.67" stop-color="#A66BFF"></stop><stop offset="0.84" stop-color="#FF8FB1"></stop><stop offset="1" stop-color="#FF4D6D"></stop></linearGradient>
+<clipPath id="g4c"><rect x="16" y="52" width="283" height="230" rx="10"></rect></clipPath></defs>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#g4f)"></rect>
+<rect x="6" y="6" width="303" height="428" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"></rect>
+<rect x="0" y="0" class="cardsvg" rx="16" fill="url(#g4r)" opacity="0.16"></rect><text x="300" y="304" text-anchor="end" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="11" fill="#14213D">HOLOFOIL</text>
+<text x="22" y="38" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="24" fill="#14213D">Nebbly</text>
+<circle cx="284" cy="30" r="15" fill="#14213D"></circle><path transform="translate(284 30) scale(0.75)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#E5D4FF"></path>
+<g clip-path="url(#g4c)">
+<rect x="16" y="52" width="283" height="230" fill="url(#g4b)"></rect>
+<circle cx="157" cy="175" r="95" fill="#FFFFFF" opacity="0.10"></circle>
+<circle cx="87" cy="82" r="1.4" fill="#FFFFFF" opacity="0.58"></circle><circle cx="42" cy="144" r="2.3" fill="#FFFFFF" opacity="0.90"></circle><circle cx="228" cy="107" r="1.7" fill="#FFFFFF" opacity="0.64"></circle><circle cx="70" cy="82" r="1.1" fill="#FFFFFF" opacity="0.96"></circle><circle cx="244" cy="229" r="2.1" fill="#FFFFFF" opacity="0.60"></circle><circle cx="106" cy="192" r="2.0" fill="#FFFFFF" opacity="0.93"></circle><circle cx="258" cy="78" r="1.8" fill="#FFFFFF" opacity="0.84"></circle><circle cx="159" cy="97" r="1.6" fill="#FFFFFF" opacity="0.54"></circle><circle cx="273" cy="242" r="1.7" fill="#FFFFFF" opacity="0.65"></circle><circle cx="266" cy="180" r="2.2" fill="#FFFFFF" opacity="0.92"></circle><circle cx="159" cy="147" r="1.8" fill="#FFFFFF" opacity="0.72"></circle><circle cx="67" cy="124" r="2.1" fill="#FFFFFF" opacity="0.52"></circle><circle cx="36" cy="192" r="1.2" fill="#FFFFFF" opacity="0.77"></circle><circle cx="149" cy="132" r="2.4" fill="#FFFFFF" opacity="0.60"></circle><circle cx="134" cy="103" r="1.8" fill="#FFFFFF" opacity="0.64"></circle><circle cx="119" cy="217" r="1.3" fill="#FFFFFF" opacity="0.78"></circle><circle cx="265" cy="81" r="0.9" fill="#FFFFFF" opacity="0.61"></circle><circle cx="228" cy="189" r="1.2" fill="#FFFFFF" opacity="0.67"></circle>
+<ellipse cx="157" cy="268" rx="90" ry="10" fill="#000000" opacity="0.25"></ellipse>
+<g transform="translate(157 170) scale(1.35) translate(0 -8)">
+<path d="M-30 10 Q-36 40 -26 70" fill="none" stroke="#C59BFF" stroke-width="5" stroke-linecap="round"></path><path d="M-10 14 Q-2 44 -12 78" fill="none" stroke="#E5D4FF" stroke-width="5" stroke-linecap="round"></path><path d="M10 14 Q2 44 12 78" fill="none" stroke="#C59BFF" stroke-width="5" stroke-linecap="round"></path><path d="M30 10 Q36 40 26 70" fill="none" stroke="#E5D4FF" stroke-width="5" stroke-linecap="round"></path>
+<circle cx="0" cy="-10" r="62" fill="#A66BFF" opacity="0.25"></circle>
+<path d="M-50 12 Q-54 -54 0 -56 Q54 -54 50 12 Q36 20 25 12 Q12 22 0 12 Q-12 22 -25 12 Q-36 20 -50 12 Z" fill="#A66BFF"></path>
+<circle cx="-24" cy="-30" r="4" fill="#FFFFFF" opacity="0.8"></circle><circle cx="22" cy="-36" r="3" fill="#FFFFFF" opacity="0.7"></circle><circle cx="30" cy="-14" r="2.5" fill="#FFE58A"></circle><circle cx="-34" cy="-8" r="2.5" fill="#FFE58A"></circle>
+<ellipse cx="-14" cy="-14" rx="6" ry="8" fill="#14213D"></ellipse><ellipse cx="14" cy="-14" rx="6" ry="8" fill="#14213D"></ellipse><circle cx="-12" cy="-17" r="2" fill="#FFFFFF"></circle><circle cx="16" cy="-17" r="2" fill="#FFFFFF"></circle>
+<path d="M-7 0 Q0 7 7 0" fill="none" stroke="#14213D" stroke-width="2.5" stroke-linecap="round"></path>
+</g>
+<rect x="16" y="52" width="283" height="230" fill="url(#g4r)" opacity="0.14"></rect><path transform="translate(299 202) scale(0.34)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.53"></path><path transform="translate(73 43) scale(0.32)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.38"></path><path transform="translate(123 384) scale(0.37)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.38"></path><path transform="translate(34 103) scale(0.37)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.36"></path><path transform="translate(76 55) scale(0.23)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.48"></path><path transform="translate(64 182) scale(0.35)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.53"></path><path transform="translate(132 340) scale(0.31)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.56"></path><path transform="translate(83 165) scale(0.32)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.59"></path><path transform="translate(192 209) scale(0.25)" d="M0 -12 L2.5 -2.5 L12 0 L2.5 2.5 L0 12 L-2.5 2.5 L-12 0 L-2.5 -2.5 Z" fill="#FFFFFF" opacity="0.42"></path>
+</g>
+<rect x="16" y="52" width="283" height="230" rx="10" fill="none" stroke="#14213D" stroke-width="3"></rect>
+<text x="22" y="304" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="10" letter-spacing="1" fill="#14213D">COSMIC · ANNIVERSARY EDITION</text>
+<rect x="16" y="316" width="283" height="78" rx="8" fill="#FFFFFF" fill-opacity="0.85"></rect>
+<text font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="13" fill="#14213D"><tspan x="28" y="340">Drifts between the stars.</tspan><tspan x="28" y="359">Spotting one is said to bring</tspan><tspan x="28" y="378">a lucky pull.</tspan></text>
+<text x="22" y="423" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="11" fill="#14213D">05/05</text>
+<text x="157" y="423" text-anchor="middle" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="#14213D">PULLSTAR</text>
+<path transform="translate(292 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path><path transform="translate(276 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path><path transform="translate(260 418) scale(0.5)" d="M0 -13L3.5 -4.5L12.5 -4L5.5 2L8 11L0 6L-8 11L-5.5 2L-12.5 -4L-3.5 -4.5Z" fill="#14213D"></path>
+</svg></div>
+<div class="meta"><h3>Nebbly</h3><p>Cosmic type, rare holofoil</p>
+<p class="mp">Market price <strong data-mp="4">Not listed yet</strong></p>
+<button class="got" data-id="4" aria-pressed="false">I've got it</button></div></li></ul>
+</div></section>
+<section id="open"><div class="wrap">
+<h2>How to open it</h2>
+<p class="intro">The tear strip sits 12 mm above the cards, and the stiff ad card at the back keeps the stack flat.</p>
+<ol class="steps">
+<li><h3>Hold it upright</h3><p>Front facing you, yellow strip at the top.</p></li>
+<li><h3>Grab the tab</h3><p>It sticks out on the right, with a notch so you don't need a fingernail.</p></li>
+<li><h3>Pull across</h3><p>The strip rips in one straight line and never touches the cards.</p></li>
+<li><h3>Slide them out</h3><p>Pinch the edges and lift. Nothing bends.</p></li>
+</ol>
+</div></section>
+<section id="price" class="price"><div class="wrap price-grid">
+<div class="qr"><svg viewBox="-1 -1 27 27" shape-rendering="crispEdges" role="img" aria-label="QR code to Collectr"><path d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM8 0h1v1h-1zM10 0h1v1h-1zM11 0h1v1h-1zM12 0h1v1h-1zM13 0h1v1h-1zM18 0h1v1h-1zM19 0h1v1h-1zM20 0h1v1h-1zM21 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM11 1h1v1h-1zM13 1h1v1h-1zM16 1h1v1h-1zM18 1h1v1h-1zM24 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM13 2h1v1h-1zM16 2h1v1h-1zM18 2h1v1h-1zM20 2h1v1h-1zM21 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM12 3h1v1h-1zM13 3h1v1h-1zM16 3h1v1h-1zM18 3h1v1h-1zM20 3h1v1h-1zM21 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM8 4h1v1h-1zM10 4h1v1h-1zM11 4h1v1h-1zM16 4h1v1h-1zM18 4h1v1h-1zM20 4h1v1h-1zM21 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h1v1h-1zM12 5h1v1h-1zM13 5h1v1h-1zM18 5h1v1h-1zM24 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM19 6h1v1h-1zM20 6h1v1h-1zM21 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM9 7h1v1h-1zM10 7h1v1h-1zM13 7h1v1h-1zM14 7h1v1h-1zM16 7h1v1h-1zM0 8h1v1h-1zM3 8h1v1h-1zM4 8h1v1h-1zM5 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM8 8h1v1h-1zM12 8h1v1h-1zM15 8h1v1h-1zM16 8h1v1h-1zM17 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM23 8h1v1h-1zM24 8h1v1h-1zM3 9h1v1h-1zM4 9h1v1h-1zM5 9h1v1h-1zM7 9h1v1h-1zM10 9h1v1h-1zM12 9h1v1h-1zM13 9h1v1h-1zM14 9h1v1h-1zM15 9h1v1h-1zM19 9h1v1h-1zM20 9h1v1h-1zM21 9h1v1h-1zM22 9h1v1h-1zM23 9h1v1h-1zM4 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM7 10h1v1h-1zM13 10h1v1h-1zM15 10h1v1h-1zM18 10h1v1h-1zM19 10h1v1h-1zM21 10h1v1h-1zM24 10h1v1h-1zM3 11h1v1h-1zM4 11h1v1h-1zM5 11h1v1h-1zM7 11h1v1h-1zM9 11h1v1h-1zM10 11h1v1h-1zM12 11h1v1h-1zM18 11h1v1h-1zM19 11h1v1h-1zM21 11h1v1h-1zM22 11h1v1h-1zM23 11h1v1h-1zM24 11h1v1h-1zM0 12h1v1h-1zM2 12h1v1h-1zM4 12h1v1h-1zM6 12h1v1h-1zM7 12h1v1h-1zM8 12h1v1h-1zM10 12h1v1h-1zM11 12h1v1h-1zM12 12h1v1h-1zM16 12h1v1h-1zM18 12h1v1h-1zM19 12h1v1h-1zM24 12h1v1h-1zM0 13h1v1h-1zM2 13h1v1h-1zM4 13h1v1h-1zM5 13h1v1h-1zM7 13h1v1h-1zM10 13h1v1h-1zM13 13h1v1h-1zM14 13h1v1h-1zM15 13h1v1h-1zM16 13h1v1h-1zM17 13h1v1h-1zM20 13h1v1h-1zM23 13h1v1h-1zM0 14h1v1h-1zM1 14h1v1h-1zM2 14h1v1h-1zM3 14h1v1h-1zM5 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM11 14h1v1h-1zM12 14h1v1h-1zM15 14h1v1h-1zM16 14h1v1h-1zM17 14h1v1h-1zM18 14h1v1h-1zM20 14h1v1h-1zM21 14h1v1h-1zM22 14h1v1h-1zM23 14h1v1h-1zM24 14h1v1h-1zM0 15h1v1h-1zM3 15h1v1h-1zM4 15h1v1h-1zM5 15h1v1h-1zM9 15h1v1h-1zM11 15h1v1h-1zM18 15h1v1h-1zM19 15h1v1h-1zM21 15h1v1h-1zM22 15h1v1h-1zM24 15h1v1h-1zM0 16h1v1h-1zM5 16h1v1h-1zM6 16h1v1h-1zM8 16h1v1h-1zM9 16h1v1h-1zM10 16h1v1h-1zM13 16h1v1h-1zM16 16h1v1h-1zM17 16h1v1h-1zM18 16h1v1h-1zM19 16h1v1h-1zM20 16h1v1h-1zM22 16h1v1h-1zM23 16h1v1h-1zM8 17h1v1h-1zM11 17h1v1h-1zM12 17h1v1h-1zM13 17h1v1h-1zM16 17h1v1h-1zM20 17h1v1h-1zM22 17h1v1h-1zM23 17h1v1h-1zM0 18h1v1h-1zM1 18h1v1h-1zM2 18h1v1h-1zM3 18h1v1h-1zM4 18h1v1h-1zM5 18h1v1h-1zM6 18h1v1h-1zM8 18h1v1h-1zM9 18h1v1h-1zM10 18h1v1h-1zM11 18h1v1h-1zM16 18h1v1h-1zM18 18h1v1h-1zM20 18h1v1h-1zM24 18h1v1h-1zM0 19h1v1h-1zM6 19h1v1h-1zM8 19h1v1h-1zM9 19h1v1h-1zM12 19h1v1h-1zM13 19h1v1h-1zM15 19h1v1h-1zM16 19h1v1h-1zM20 19h1v1h-1zM23 19h1v1h-1zM0 20h1v1h-1zM2 20h1v1h-1zM3 20h1v1h-1zM4 20h1v1h-1zM6 20h1v1h-1zM8 20h1v1h-1zM9 20h1v1h-1zM12 20h1v1h-1zM14 20h1v1h-1zM15 20h1v1h-1zM16 20h1v1h-1zM17 20h1v1h-1zM18 20h1v1h-1zM19 20h1v1h-1zM20 20h1v1h-1zM23 20h1v1h-1zM24 20h1v1h-1zM0 21h1v1h-1zM2 21h1v1h-1zM3 21h1v1h-1zM4 21h1v1h-1zM6 21h1v1h-1zM8 21h1v1h-1zM9 21h1v1h-1zM10 21h1v1h-1zM13 21h1v1h-1zM14 21h1v1h-1zM15 21h1v1h-1zM17 21h1v1h-1zM18 21h1v1h-1zM23 21h1v1h-1zM24 21h1v1h-1zM0 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM6 22h1v1h-1zM10 22h1v1h-1zM12 22h1v1h-1zM16 22h1v1h-1zM17 22h1v1h-1zM20 22h1v1h-1zM21 22h1v1h-1zM22 22h1v1h-1zM23 22h1v1h-1zM24 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h1v1h-1zM14 23h1v1h-1zM17 23h1v1h-1zM18 23h1v1h-1zM19 23h1v1h-1zM20 23h1v1h-1zM22 23h1v1h-1zM23 23h1v1h-1zM24 23h1v1h-1zM0 24h1v1h-1zM1 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM5 24h1v1h-1zM6 24h1v1h-1zM8 24h1v1h-1zM9 24h1v1h-1zM10 24h1v1h-1zM12 24h1v1h-1zM13 24h1v1h-1zM14 24h1v1h-1zM16 24h1v1h-1zM21 24h1v1h-1zM24 24h1v1h-1z" fill="#14213D"/></svg></div>
+<div>
+<h2>What's your pull worth?</h2>
+<p class="intro">Scan the code on the front of the pack, or this one, to look up market prices on Collectr.</p>
+<div class="btns"><a class="btn primary" href="https://getcollectr.com" target="_blank" rel="noopener">Check prices on Collectr</a></div>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><span class="foot-logo"><svg viewBox="0 0 260 64" width="150" height="37" role="img" aria-label="Pullstar"><polygon points="32.0,4.0 39.6,23.5 60.5,24.7 44.4,38.0 49.6,58.3 32.0,47.0 14.4,58.3 19.6,38.0 3.5,24.7 24.4,23.5" fill="#FFC93C" stroke="#14213D" stroke-width="3" stroke-linejoin="round"/><path d="M22 35 H40 M34 29 L40 35 L34 41" fill="none" stroke="#14213D" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><text x="70" y="46" font-family="'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="36" letter-spacing="-0.5" textLength="184" lengthAdjust="spacingAndGlyphs" fill="#F4F1EA">PULL<tspan fill="#FFC93C">STAR</tspan></text></svg></span><span>Pullstar Anniversary Edition. Where to buy: [YOUR SHOP]</span></div></footer>
+<script>
+(function(){
+ // Market prices: put a number for each card in order (Sparklet, Frillo, Embowl, Mothleaf, Nebbly). null = not listed yet.
+ var PRICES=[6,3,1000,4,50],CURRENCY='$';
+ document.querySelectorAll('[data-mp]').forEach(function(el){var p=PRICES[+el.dataset.mp];if(typeof p==='number')el.textContent=CURRENCY+p.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});});
+ var KEY='pullstar-got',got=[];try{got=JSON.parse(localStorage.getItem(KEY)||'[]')||[];}catch(e){got=[];}
+ var btns=[].slice.call(document.querySelectorAll('.got')),count=document.getElementById('count');
+ function render(){btns.forEach(function(b){var on=got.indexOf(+b.dataset.id)>-1;b.setAttribute('aria-pressed',on);b.textContent=on?'Got it':"I've got it";b.closest('.cell').classList.toggle('have',on);});
+  var tot=0,known=true;got.forEach(function(i){if(typeof PRICES[i]==='number')tot+=PRICES[i];else known=false;});
+  count.textContent=(got.length===5?'You have the full set!':'You have '+got.length+' of 5 so far.')+(got.length&&known?' Worth about '+CURRENCY+tot.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})+'.':'');}
+ btns.forEach(function(b){b.addEventListener('click',function(){var id=+b.dataset.id;got=got.indexOf(id)>-1?got.filter(function(x){return x!==id;}):got.concat([id]);try{localStorage.setItem(KEY,JSON.stringify(got));}catch(e){}render();});});
+ render();
+})();
+</script>
+</body>
+
+</html>
